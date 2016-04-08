@@ -16,7 +16,10 @@ namespace SeleniumTests.Pages
         public Login(IWebDriver _driver)
         {
             this.driver = _driver;
+
+            //lazy loading, wait will start only if we perform operation on control
             RetryingElementLocator factory = new RetryingElementLocator(driver, TimeSpan.FromMinutes(2));
+
             PageFactory.InitElements(this,factory);
         }
 
