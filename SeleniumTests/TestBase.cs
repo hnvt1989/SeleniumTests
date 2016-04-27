@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Configuration;
-using NUnit.Framework;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
+using OpenQA.Selenium.Firefox;
+using OpenQA.Selenium.IE;
+using OpenQA.Selenium.Remote;
 
 
 namespace SeleniumTests
@@ -144,6 +146,8 @@ namespace SeleniumTests
         {
             _driver.Navigate().GoToUrl(_baseUrl + url);
         }
+
+        public enum AccountTypeIndex { CUS = 2, KIT = 3, KIT25 = 4, CON = 5 }
     }
 
 }
