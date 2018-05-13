@@ -13,16 +13,16 @@ namespace SeleniumTests.Tests
         private IWebDriver driver;
         private Login login;
 
-        [TestFixtureSetUp]
+        [OneTimeSetUp]
         public void TestFixtureSetup()
         {
             driver = new ChromeDriver();
-            driver.Manage().Timeouts().ImplicitlyWait(TimeSpan.FromSeconds(5));
+            driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(20);
 
             login = new Login(driver);
         }
 
-        [TestFixtureTearDown]
+        [OneTimeTearDown]
         public void OneTimeTearDown()
         {
             Thread.Sleep(2000);

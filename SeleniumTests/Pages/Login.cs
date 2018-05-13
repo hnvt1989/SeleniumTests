@@ -9,6 +9,7 @@ using OpenQA.Selenium.Support.PageObjects;
 
 namespace SeleniumTests.Pages
 {
+    //REF: Page Object model: https://developers.perfectomobile.com/pages/viewpage.action?pageId=21431059
     public class Login
     {
         private IWebDriver driver;
@@ -29,6 +30,7 @@ namespace SeleniumTests.Pages
         }
 
         [FindsBy(How = How.Id, Using = "ctl00_MainContent_PortalLogin_UserName")]
+        [CacheLookup] //The CacheLookup property will tell Selenium to cache the web object the first time it is found
         private IWebElement Username;
 
         [FindsBy(How = How.Id, Using = "ctl00_MainContent_PortalLogin_Password")]

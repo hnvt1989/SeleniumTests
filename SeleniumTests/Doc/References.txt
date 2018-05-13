@@ -1,0 +1,3 @@
+﻿really good reference on automation: 
+https://developers.perfectomobile.com/display/TT/Automation
+
